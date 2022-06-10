@@ -4,7 +4,7 @@
 
 *.pdf
 *.jl
-Guijiang
+# Guijiang
 
 images/*
 test/
