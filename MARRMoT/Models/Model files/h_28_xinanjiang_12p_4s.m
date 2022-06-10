@@ -83,16 +83,15 @@ classdef h_28_xinanjiang_12p_4s < Hydro_model
             cg   = theta(12);    % Baseflow time coefficient [d-1]
             
             % auxiliary parameters
-            aux_theta = obj.aux_theta;
-            wmax = aux_theta(1); % Maximum tension water depth [mm]
-            smax = aux_theta(2); % Maximum free water depth [mm]
-            lm   = aux_theta(3); % Tension water threshold for evaporation change [mm]
+            % aux_theta = obj.aux_theta;
+            wmax = obj.aux_theta(1); % Maximum tension water depth [mm]
+            smax = obj.aux_theta(2); % Maximum free water depth [mm]
+            lm   = obj.aux_theta(3); % Tension water threshold for evaporation change [mm]
             
             % delta_t
             delta_t = obj.delta_t;
         
             % stores
-            % stores璁や负鏄笂涓€鏃跺埢
             S1 = S(1); % W
             S2 = S(2); % S
             S3 = S(3); % Si
@@ -103,7 +102,7 @@ classdef h_28_xinanjiang_12p_4s < Hydro_model
             climate_in = obj.input_climate(t,:);   % climate at this step
             P  = climate_in(1);
             Ep = climate_in(2);
-            T  = climate_in(3);
+            % T  = climate_in(3);
             
             %% fluxes functions
             % flux_rb = split_1(aim,P);
