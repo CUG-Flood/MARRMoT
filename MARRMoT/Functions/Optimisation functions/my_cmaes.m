@@ -1554,8 +1554,8 @@ while isempty(stopflag)
 	    'idx:Min SD idx:Max SD']); 
     end
     if mod(countiter, verbosemodulo) < 1 ...
-	  || (verbosemodulo > 0 && isfinite(verbosemodulo) && ...
-	      (countiter < 3 || ~isempty(stopflag)))
+      || (verbosemodulo > 0 && isfinite(verbosemodulo)) % && (~isempty(stopflag))
+	  % || (verbosemodulo > 0 && isfinite(verbosemodulo) && (countiter < 3 || ~isempty(stopflag)))
       [minstd minstdidx] = min(sigma*sqrt(diagC));
       [maxstd maxstdidx] = max(sigma*sqrt(diagC));
       % format display nicely

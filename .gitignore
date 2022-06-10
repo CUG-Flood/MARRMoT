@@ -1,0 +1,10 @@
+*.mat
+*.dat
+*.csv
+
+*.pdf
+*.jl
+Guijiang
+
+images/*
+test/
